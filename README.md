@@ -443,8 +443,8 @@ time native-image \
   -H:+TraceClassInitialization \
   -H:Name=$ARTIFACT \
   -H:+ReportExceptionStackTraces \
-  -Dspring.graal.remove-unused-autoconfig=true \
-  -Dspring.graal.remove-yaml-support=true \
+  -Dspring.native.remove-unused-autoconfig=true \
+  -Dspring.native.remove-yaml-support=true \
   -cp $CP $MAINCLASS;
 ```
 
@@ -535,7 +535,7 @@ Therefor let's add a new Maven profile to our [pom.xml](pom.xml) as [described i
 						<artifactId>native-image-maven-plugin</artifactId>
 						<version>20.1.0</version>
 						<configuration>
-							<buildArgs>-J-Xmx4G -H:+TraceClassInitialization -H:+ReportExceptionStackTraces -Dspring.graal.remove-unused-autoconfig=true -Dspring.graal.remove-yaml-support=true</buildArgs>
+							<buildArgs>-J-Xmx4G -H:+TraceClassInitialization -H:+ReportExceptionStackTraces -Dspring.native.remove-unused-autoconfig=true -Dspring.native.remove-yaml-support=true</buildArgs>
                             <imageName>${project.artifactId}</imageName>
 						</configuration>
 						<executions>
@@ -1283,8 +1283,8 @@ time native-image \
   -H:+TraceClassInitialization \
   -H:Name=$ARTIFACT \
   -H:+ReportExceptionStackTraces \
-  -Dspring.graal.remove-unused-autoconfig=true \
-  -Dspring.graal.remove-yaml-support=true \
+  -Dspring.native.remove-unused-autoconfig=true \
+  -Dspring.native.remove-yaml-support=true \
   -cp $CP $MAINCLASS;
 ```
 
